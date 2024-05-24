@@ -1,0 +1,147 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #666666;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+}
+
+main {
+    padding-top: 100px; /* Ajuste para header fijo */
+    padding-bottom: 70px; /* Espacio adicional al final del contenido principal */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #336666;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #99cc33;
+}
+
+main {
+    padding-top: 100px; /* Ajuste para header fijo */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+footer {
+    background-color: #669933;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos del formulario */
+form {
+    width: 80%;
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centrar el formulario horizontalmente */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 2px solid #336666; /* Marco alrededor del formulario */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Agregamos scroll vertical si es necesario */
+}
+
+form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form select {
+    width: calc(100% - 16px); /* Considerando el padding */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #336666;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #99cc33;
+}
+
+/* Estilos para las tarjetas */
+.tarjeta {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 12px #aaa;
+}
+
+.foto-tarjeta {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los botones */
+.btn-outline-primary:hover,
+.btn-outline-success:hover,
+.btn-outline-dark:hover {
+    background-color: #99cc33;
+    color: white;
+}
