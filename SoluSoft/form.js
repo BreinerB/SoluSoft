@@ -9,8 +9,44 @@ function generarTarjeta() {
     const habilidades = Array.from(document.querySelectorAll('input[name="habilidades"]:checked'))
         .map(habilidad => habilidad.value);
 
+    const nombrePattern = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+    const profesionPattern = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+    const telefonoPattern = /^[0-9]{10}$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const linkedinPattern = /^https?:\/\/(www\.)?linkedin\.com\/.*$/;
+
+    if (!nombrePattern.test(nombre)) {
+        alert('El nombre solo puede contener letras y espacios.');
+        return;
+    }
+
+    if (!profesionPattern.test(profesion)) {
+        alert('La profesión solo puede contener letras y espacios.');
+        return;
+    }
+
+    if (!telefonoPattern.test(telefono)) {
+        alert('El teléfono debe contener 10 dígitos.');
+        return;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert('Debe ingresar un correo electrónico válido.');
+        return;
+    }
+
+    if (!linkedinPattern.test(linkedin)) {
+        alert('Debe ser un enlace válido de LinkedIn.');
+        return;
+    }
+
     if (habilidades.length > 3) {
         alert('Puede seleccionar un máximo de 3 habilidades.');
+        return;
+    }
+
+    if (!foto) {
+        alert("Por favor, seleccione una foto.");
         return;
     }
 
@@ -37,9 +73,6 @@ function generarTarjeta() {
         nuevaVentana.document.close();
     }
 
-    if (foto) {
-        reader.readAsDataURL(foto);
-    } else {
-        alert("Por favor, seleccione una foto.");
-    }
+    reader.readAsDataURL(foto);
 }
+
