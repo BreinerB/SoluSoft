@@ -1,1 +1,1 @@
-SoluSoft By Breiner Bautista
+SoluSoft By Breiner Bautista y Santiago Rojas
